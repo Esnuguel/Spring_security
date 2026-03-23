@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: inicio
+    servlet:
+        multipart:
+            max-request-size: 10MB
+            max-file-size: 1MB
+    cache:
+        type: simple
+
+
+
+server:
+    port: 8082
