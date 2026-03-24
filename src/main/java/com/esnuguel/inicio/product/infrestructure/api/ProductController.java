@@ -31,6 +31,8 @@ import com.esnuguel.inicio.product.infrestructure.api.dto.ProductDto;
 import com.esnuguel.inicio.product.infrestructure.api.dto.UpdateProductDto;
 import com.esnuguel.inicio.product.infrestructure.api.mapper.ProductMapper;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -38,6 +40,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/products")
+@Tag(name = "Product", description = "Product API Operation")
 @Slf4j
 public class ProductController implements ProductApi {
 
@@ -45,6 +48,7 @@ public class ProductController implements ProductApi {
 
     private final ProductMapper productMapper;
 
+    @Operation(summary = "Get all products")
     @GetMapping("")
     public ResponseEntity<List<ProductDto>> getAllProducts(@RequestParam(required = false) String pageSize){
         log.info("Getting all products");
@@ -57,6 +61,7 @@ public class ProductController implements ProductApi {
         return ResponseEntity.ok(productsDto);
     }
 
+    @Operation(summary = "Get product by id",description = "Get product by id xd")
     @GetMapping("/{id}")
     public ResponseEntity<ProductDto> getProdcutById(@PathVariable long id){
         GetProductByIdResponse response= mediator.dispatch(new GetProductByIdRequest(id));

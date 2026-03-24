@@ -15,7 +15,7 @@ public class FixProductsPriceSchedule {
 
     private final ProductoRepository productoRepository;
 
-    @Scheduled(fixedRate = 6000) //cada 6 seg se ejecuta esto :v
+    @Scheduled(fixedRate = 600000) //cada 600  seg se ejecuta esto :v
     public void fixProductsPrice(){
         log.info("Fixing products price");
         productoRepository.findAll().forEach(p->{
