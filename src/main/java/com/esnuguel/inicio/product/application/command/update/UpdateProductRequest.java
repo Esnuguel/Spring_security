@@ -3,6 +3,7 @@ package com.esnuguel.inicio.product.application.command.update;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.esnuguel.inicio.common.application.mediator.Request;
+import com.esnuguel.inicio.review.domain.Review;
 
 import lombok.Data;
 
@@ -12,5 +13,7 @@ public class UpdateProductRequest implements Request<Void> {
     private String description;
     private Double price;
     private Long id;
-    private MultipartFile file;
+    private String provider;
+    private Review review;
+    private Long categoryId;
 }

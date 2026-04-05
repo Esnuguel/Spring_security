@@ -52,11 +52,11 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>org.mapstruct</groupId>
+			<groupId>org.mapstruct</groupId> 
 			<artifactId>mapstruct</artifactId>
 			<version>1.6.2</version>
 		</dependency>
@@ -74,31 +74,13 @@
 			<version>0.2.0</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cache</artifactId>
-		</dependency>
 
-		<!-- Dependencia que le falta a spring-boot-resttestclient -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-restclient</artifactId>
-			<scope>test</scope>
-		</dependency>
 
-		<!-- Para @AutoConfigureMockMvc en Spring Boot 4 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-webmvc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 
-		<!-- Para TestRestTemplate en Spring Boot 4 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-resttestclient</artifactId>
-			<scope>test</scope>
-		</dependency>
+
+
+
+
 
 		<!-- Source: https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
 		<dependency>
@@ -123,6 +105,11 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	
@@ -143,7 +130,9 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>1.18.30</version>
 						</path>
+
 
 					</annotationProcessorPaths>
 				</configuration>

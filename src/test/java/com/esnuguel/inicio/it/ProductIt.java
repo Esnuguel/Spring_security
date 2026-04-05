@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.esnuguel.inicio.product.domain.entity.Product;
 import com.esnuguel.inicio.product.domain.port.ProductoRepository;
-import com.esnuguel.inicio.product.infrestructure.api.dto.ProductDto;
+import com.esnuguel.inicio.product.infrastructure.api.dto.ProductDto;
 
 import lombok.extern.slf4j.Slf4j;
 

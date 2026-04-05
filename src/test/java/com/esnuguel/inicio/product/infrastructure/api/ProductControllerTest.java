@@ -20,9 +20,9 @@ import com.esnuguel.inicio.common.application.mediator.Mediator;
 import com.esnuguel.inicio.product.application.query.getAll.GetAllProductRequest;
 import com.esnuguel.inicio.product.application.query.getAll.GetAllProductResponse;
 import com.esnuguel.inicio.product.domain.entity.Product;
-import com.esnuguel.inicio.product.infrestructure.api.ProductController;
-import com.esnuguel.inicio.product.infrestructure.api.dto.ProductDto;
-import com.esnuguel.inicio.product.infrestructure.api.mapper.ProductMapper;
+import com.esnuguel.inicio.product.infrastructure.api.ProductController;
+import com.esnuguel.inicio.product.infrastructure.api.dto.ProductDto;
+import com.esnuguel.inicio.product.infrastructure.api.mapper.ProductMapper;
 @ExtendWith(MockitoExtension.class)
 public class ProductControllerTest {
     @InjectMocks
